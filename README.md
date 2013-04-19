@@ -1,2 +1,3 @@
 LinuxConfig
 ===========
+My current Conky configurations and others...
