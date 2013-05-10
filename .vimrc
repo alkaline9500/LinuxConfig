@@ -14,4 +14,4 @@ set smartindent
 " => Insert mode maps
 """
 imap ;print System.out.println();<Left><Left>
-imap ;doc /**<CR><Space>*<CR><Space>*/
+imap ;doc /**<CR><Space>*<CR>*/
