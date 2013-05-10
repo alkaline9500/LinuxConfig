@@ -14,7 +14,7 @@ set smartindent
 " => Insert mode maps
 """""""""""""""
 imap ;print System.out.println();<Left><Left>
-imap ;doc /**<CR><Space>*<CR>*/
+imap ;doc /**<CR><Space>*<Space><CR>*/<Up>
 
 """""""""""""""
 " => Text, tab, and indent
