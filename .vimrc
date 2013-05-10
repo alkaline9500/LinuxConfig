@@ -15,6 +15,7 @@ set smartindent
 """""""""""""""
 imap ;print System.out.println();<Left><Left>
 imap ;doc /**<CR><Space>*<Space><CR>*/<Up>
+imap /** /**<CR><Space>*<Space><CR>*/<Up>
 
 """""""""""""""
 " => Text, tab, and indent
