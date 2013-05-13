@@ -9,6 +9,7 @@
 """""""""""""""
 set nu
 set smartindent
+syntax on
 
 """""""""""""""
 " => Insert mode maps
