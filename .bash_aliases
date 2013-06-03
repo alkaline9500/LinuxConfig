@@ -1,0 +1,5 @@
+alias usblock='/home/alkaline/Desktop/autoUnlock'
+alias minecraft='java -Xmx1024M -Xms512M -cp Minecraft.jar net.minecraft.LauncherFrame'
+alias mserver='java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui'
+alias down='ls -t ~/Downloads/ | head -10'
+alias lastdown='ls -t ~/Downloads/ | head -1'
