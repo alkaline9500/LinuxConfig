@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+import pywapi
+import sys
+import smtplib
+
+result = pywapi.get_weather_from_yahoo('14623', '')
+outstring =  "Currently " + result["condition"]["temp"] + " F, " + result["condition"]["text"] + "\nHigh " + result["forecasts"][0]["high"] + " F, Low " + result["forecasts"][0]["low"] + "\nForecast: " + result["forecasts"][0]["text"]  
+server = smtplib.SMTP("smtp.gmail.com", 587)
+server.starttls()
+server.login('manoogian4@gmail.com', 'Frodo123')
+server.sendmail('Manoogian', '8606080304@vtext.com', outstring)
