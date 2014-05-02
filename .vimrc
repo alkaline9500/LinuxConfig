@@ -14,7 +14,8 @@ syntax on
 """""""""""""""
 " => Insert mode maps
 """""""""""""""
-imap ;print System.out.println();<Left><Left>
+imap ;print printf("\n");<Left><Left><Left><Left><Left>
+imap ;for for(int i = 0; i < ; i++)<Left><Left><Left><Left><Left><Left>
 imap ;doc /**<CR><Space>*<Space><CR>*/<Up>
 imap /** /**<CR><Space>*<Space><CR>*/<Up>
 
@@ -36,3 +37,16 @@ set tabstop=4
 """""""""""""""
 " Use space to search
 map <space> /
+
+" Easy moving with searches 
+set ignorecase
+set smartcase
+set incsearch
+
+
+"""""""""""""""
+" => Grading quickmaps
+"""""""""""""""
+map ;f :tabnew feedback.txt<CR>
+map ;x :s/xx/
+map ;t /TODO<CR>
