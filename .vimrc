@@ -7,7 +7,7 @@
 """""""""""""""
 " => Syntax
 """""""""""""""
-set nu
+set relativenumber
 set smartindent
 syntax on
 
