@@ -38,6 +38,9 @@ set tabstop=4
 " Use space to search
 map <space> /
 
+" Easier setting spell
+map <F5> :set spell<CR>
+
 " Easy moving with searches 
 set ignorecase
 set smartcase
