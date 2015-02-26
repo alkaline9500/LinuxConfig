@@ -5,8 +5,8 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
-if [ -f ~/.bash_dirses ]; then
-    source ~/.bash_dirses
+if [ -f ~/.bash_dirs ]; then
+    source ~/.bash_dirs
 fi
 
 export PATH=~/bin:$PATH
