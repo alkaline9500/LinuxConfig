@@ -8,4 +8,5 @@ echo "Installing VIM Settings"
 cp .vimrc ~/
 
 echo "Installing ~/bin"
+mkdir -p ~/bin/
 rsync -a bin/ ~/bin/
