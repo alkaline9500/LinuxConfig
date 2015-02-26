@@ -1,5 +1,11 @@
 #!/bin/bash
-echo "Installing bash aliases"
+echo "Installing Bash Settings"
+cp .bashrc ~/
 cp .bash_aliases ~/
+touch ~/.bash_dirs
+
 echo "Installing VIM Settings"
 cp .vimrc ~/
+
+echo "Installing ~/bin"
+rsync -a bin/ ~/bin/
