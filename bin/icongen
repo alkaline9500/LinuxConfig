@@ -116,12 +116,6 @@ CONTENTS='''
       "idiom" : "mac",
       "filename" : "iTunesArtwork.png",
       "scale" : "1x"
-    },
-    {
-      "size" : "512x512",
-      "idiom" : "mac",
-      "filename" : "iTunesArtwork@2x.png",
-      "scale" : "2x"
     }
   ],
   "info" : {
@@ -131,40 +125,39 @@ CONTENTS='''
 }
 '''
 
-ITUNES_ARTWORK="$1"
-FOLDER=`dirname "$ITUNES_ARTWORK"`"/AppIcon.appiconset"
+ITUNES_ARTWORK=`basename $1 .png`
+FOLDER=`dirname "$ITUNES_ARTWORK"`"/${ITUNES_ARTWORK}.appiconset"
 
 mkdir -p "$FOLDER"
 
 echo $CONTENTS > "${FOLDER}/Contents.json"
 
-sips -z 29 29 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-Small.png"
-sips -z 58 58 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-Small@2x.png"
-sips -z 87 87 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-Small@3x.png"
+sips -z 29 29 "$1" --out "${FOLDER}/Icon-Small.png"
+sips -z 58 58 "$1" --out "${FOLDER}/Icon-Small@2x.png"
+sips -z 87 87 "$1" --out "${FOLDER}/Icon-Small@3x.png"
 
-sips -z 40 40 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-Small-40.png"
-sips -z 80 80 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-Small-40@2x.png"
+sips -z 40 40 "$1" --out "${FOLDER}/Icon-Small-40.png"
+sips -z 80 80 "$1" --out "${FOLDER}/Icon-Small-40@2x.png"
 
-sips -z 57 57 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon.png"
-sips -z 114 114 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon@2x.png"
+sips -z 57 57 "$1" --out "${FOLDER}/Icon.png"
+sips -z 114 114 "$1" --out "${FOLDER}/Icon@2x.png"
 
-sips -z 120 120 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-60@2x.png"
-sips -z 180 180 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-60@3x.png"
+sips -z 120 120 "$1" --out "${FOLDER}/Icon-60@2x.png"
+sips -z 180 180 "$1" --out "${FOLDER}/Icon-60@3x.png"
 
-sips -z 29 29 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-Small-1.png"
-sips -z 58 58 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-Small@2x-1.png"
+sips -z 29 29 "$1" --out "${FOLDER}/Icon-Small-1.png"
+sips -z 58 58 "$1" --out "${FOLDER}/Icon-Small@2x-1.png"
 
-sips -z 80 80 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-Small-40@2x-1.png"
-sips -z 80 80 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-Small-40@2x.png"
+sips -z 80 80 "$1" --out "${FOLDER}/Icon-Small-40@2x-1.png"
+sips -z 80 80 "$1" --out "${FOLDER}/Icon-Small-40@2x.png"
 
-sips -z 50 50 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-Small-50.png"
-sips -z 100 100 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-Small-50@2x.png"
+sips -z 50 50 "$1" --out "${FOLDER}/Icon-Small-50.png"
+sips -z 100 100 "$1" --out "${FOLDER}/Icon-Small-50@2x.png"
 
-sips -z 72 72 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-72.png"
-sips -z 144 144 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-72@2x.png"
+sips -z 72 72 "$1" --out "${FOLDER}/Icon-72.png"
+sips -z 144 144 "$1" --out "${FOLDER}/Icon-72@2x.png"
 
-sips -z 76 76 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-76.png"
-sips -z 152 152 "$ITUNES_ARTWORK" --out "${FOLDER}/Icon-76@2x.png"
+sips -z 76 76 "$1" --out "${FOLDER}/Icon-76.png"
+sips -z 152 152 "$1" --out "${FOLDER}/Icon-76@2x.png"
 
-sips -z 512 512 "$ITUNES_ARTWORK" --out "${FOLDER}/iTunesArtwork.png"
-sips -z 512 512 "$ITUNES_ARTWORK" --out "${FOLDER}/iTunesArtwork@2x.png"
+sips -z 512 512 "$1" --out "${FOLDER}/iTunesArtwork.png"
