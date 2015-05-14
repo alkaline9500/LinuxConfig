@@ -54,4 +54,4 @@ map ;f :tabnew feedback.txt<CR>
 map ;x :s/xx/
 map ;t /TODO<CR>
 
-map ;copy ggVG:!pbcopy<CR>u
+map ;copy :%!pbcopy<CR>u
