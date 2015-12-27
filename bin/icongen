@@ -28,6 +28,12 @@ CONTENTS='''
       "scale" : "2x"
     },
     {
+      "idiom" : "iphone",
+      "size" : "40x40",
+      "filename" : "Icon-Small-40@3x.png",
+      "scale" : "3x"
+    },
+    {
       "size" : "57x57",
       "idiom" : "iphone",
       "filename" : "Icon.png",
@@ -112,10 +118,22 @@ CONTENTS='''
       "scale" : "2x"
     },
     {
+      "idiom" : "ipad",
+      "size" : "83.5x83.5",
+      "filename" : "Icon-83.5@2x.png",
+      "scale" : "2x"
+    },
+    {
       "size" : "512x512",
       "idiom" : "mac",
       "filename" : "iTunesArtwork.png",
       "scale" : "1x"
+    },
+    {
+      "idiom" : "mac",
+      "size" : "512x512",
+      "filename" : "Icon-512@2x.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
@@ -138,6 +156,7 @@ sips -z 87 87 "$1" --out "${FOLDER}/Icon-Small@3x.png"
 
 sips -z 40 40 "$1" --out "${FOLDER}/Icon-Small-40.png"
 sips -z 80 80 "$1" --out "${FOLDER}/Icon-Small-40@2x.png"
+sips -z 120 120 "$1" --out "${FOLDER}/Icon-Small-40@3x.png"
 
 sips -z 57 57 "$1" --out "${FOLDER}/Icon.png"
 sips -z 114 114 "$1" --out "${FOLDER}/Icon@2x.png"
@@ -159,5 +178,9 @@ sips -z 144 144 "$1" --out "${FOLDER}/Icon-72@2x.png"
 
 sips -z 76 76 "$1" --out "${FOLDER}/Icon-76.png"
 sips -z 152 152 "$1" --out "${FOLDER}/Icon-76@2x.png"
+
+sips -z 167 167 "$1" --out "${FOLDER}/Icon-83.5@2x.png"
+
+sips -z 1024 1024 "$1" --out "${FOLDER}/Icon-512@2x.png"
 
 sips -z 512 512 "$1" --out "${FOLDER}/iTunesArtwork.png"
