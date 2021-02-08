@@ -1,0 +1,9 @@
+alias reveal='open -R'
+alias purr='afplay /System/Library/Sounds/Purr.aiff'
+
+function mkgitignore() {
+    curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/master/$1.gitignore
+    echo ".idea" >> .gitignore
+}
+
+alias upper="tr '[:lower:]' '[:upper:]'"
